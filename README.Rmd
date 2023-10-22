@@ -21,6 +21,14 @@ knitr::opts_chunk$set(
 
 * 
 
+```
+- Start with vectors of strings, "inventory"
+   - c("Red Apple", "Green Apple", "Ruby Red Grapefruit", "Queen Pineapple", "Red Spanish Pineapple")
+- Compare to grep
+- Graduate to the second dimension
+- Compare to grep considering specific column placing or combined with awk
+```
+
 ---
 
 <a name="table-of-contents"></a>
@@ -71,6 +79,21 @@ Navigate to **Interactive In-Browser R by DataCamp Light** at: [https://learn.at
 <a name="background"></a>
 
 ## Background
+
+* The typical data you will work on in R are structured tabular data; think of an Excel spreadsheet of neat rows and columns of cells 
+* In R, you can easily manipulate specific rows and/or columns of your tabular data, even specific cells!
+* Before we begin, let's understand how to navigate tabular data in R
+* Let's make a tabular `data.frame` object with two columns of information about people's favorite foods:
+
+```{r}
+df = data.frame(
+  "name" = c("Tina", "Gene", "Louise"),
+  "food" = c("Buns", "Burgers", "")
+)
+print(df)
+```
+
+* We will concentrate on only manipulating tabular data by columns in this tutorial; this is because most tabular data are structured in that rows are records of data and the columns are values of the same type (e.g.)
 
 [**Back to Top**](#table-of-contents)
 
